@@ -6,8 +6,8 @@ class DB extends PDO
 {
 
     private $host = '192.168.200.24';
-    private $database = 'es172002022';
-    private $user = 'root_remote';
+    private $database = 'pinturas';
+    private $user = 'remoto';
     private $password = '123456';
     private $pdo;
     private $query;

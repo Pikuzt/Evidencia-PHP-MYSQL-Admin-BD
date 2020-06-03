@@ -6,17 +6,22 @@ $objArtista = new mArtista();
 
 
 
-$objArtista->setName($_REQUEST['name']);
-$objArtista->setDireccion($_REQUEST['direccion']);
-$objArtista->setNombreUbicacion($_REQUEST['estado']);
-$objArtista->setUbicacion($_REQUEST['ubicacion']);
+$objArtista->setArea($_REQUEST['area']);
+$objArtista->setFechaEntrada($_REQUEST['hora']);
+$objArtista->setNombre($_REQUEST['name']);
+$objArtista->setApellidoM($_REQUEST['apellidoM']);
+$objArtista->setApellidoP($_REQUEST['apellidoP']);
+$objArtista->setNacimiento($_REQUEST['nacimiento']);
+$objArtista->setRfc($_REQUEST['rfc']);
 
 
 
-$ubicacion = $objArtista->addUbicacion();
-$artista = $objArtista->addArtista();
+
+
+$ubicacion = $objArtista->addPersona();
+$artista = $objArtista->addAsistencia();
 
 if ($ubicacion and $artista ){
-    echo 'Registro realizado con exito.';
+    echo 1;
 }
 
